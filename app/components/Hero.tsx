@@ -73,7 +73,7 @@ const Hero = () => {
             <Linkedin size={24} />
           </a>
           <a
-            href="https://varikuntlasaimanojresume.tiiny.site/"
+            href="https://varikuntlasaimanojresume.tiiny.site"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-blue-500 transition-colors"
