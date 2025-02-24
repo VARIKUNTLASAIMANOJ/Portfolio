@@ -26,7 +26,7 @@ const Footer = () => {
               <Linkedin />
             </a>
             <a
-              href="https://varikuntlasaimanojresume.tiiny.site/"
+              href="https://varikuntlasaimanojresume.tiiny.site"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400"
