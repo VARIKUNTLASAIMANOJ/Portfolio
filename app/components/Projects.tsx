@@ -40,11 +40,11 @@ const projects = [
     category: "AI/ML Projects",
   },
   {
-    title: "Project 5",
+    title: "Beyond-Horizon",
     description: "Coming Soon....",
     image: "/project5.jpg",
-    github: "https://github.com/yourusername/project4",
-    live: "https://project4.com",
+    github: "https://github.com/VARIKUNTLASAIMANOJ/Beyond-Horizon",
+    live: "https://beyond-horizon-dusky.vercel.app/",
     category: "Web App",
   },
 ]
