@@ -41,7 +41,7 @@ const projects = [
   },
   {
     title: "Beyond-Horizon",
-    description: "Coming Soon....",
+    description: "Beyond Horizon is a sophisticated space exploration web application built with React, Three.js, and Framer Motion, showcasing interactive 3D visualizations of the solar system, space missions, and cosmic discoveries. The project leverages React 18 with TypeScript for type safety, Three.js with React Three Fiber for immersive 3D graphics, and Framer Motion for smooth animations. Notable features include real-time planet orbits, a comprehensive space mission database, latest discoveries catalog, physics equations explorer, and a secure contact system using the Resend API. The application demonstrates expertise in modern web development, 3D graphics programming, responsive design with Tailwind CSS, and full-stack integration while providing an engaging educational platform about space exploration.",
     image: "/project5.jpg",
     github: "https://github.com/VARIKUNTLASAIMANOJ/Beyond-Horizon",
     live: "https://beyond-horizon-dusky.vercel.app/",
