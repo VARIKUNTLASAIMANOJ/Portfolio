@@ -22,10 +22,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_5n7ghlf',    // ⬅️ Replace with your EmailJS service ID
-        'template_00pm90g',   // ⬅️ Replace with your EmailJS template ID
+        'service_5n7ghlf',    // Your service ID
+        'template_00pm90g',   // Your template ID
         formRef.current,
-        'F5m1YXEgae1B1FPrY'     // ⬅️ Replace with your EmailJS public key
+        'F5m1YXEgae1B1FPrY'   // Your public key
       )
       .then(() => {
         setStatusMessage({ type: 'success', text: 'Message sent successfully!' });
@@ -45,7 +45,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden bg-black">
+    <section
+      id="contact"
+      className="py-20 relative overflow-hidden bg-black overflow-x-hidden"
+    >
       <SpaceParticles />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,8 +66,8 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -101,17 +104,17 @@ const Contact = () => {
                     <div className="w-12 h-12 bg-gray-800/60 rounded-lg flex items-center justify-center mr-4 border border-white/10">
                       <item.icon className="text-gray-300" size={20} />
                     </div>
-                    <div>
+                    <div className="break-words max-w-full">
                       <p className="text-gray-400 text-sm">{item.label}</p>
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="text-white hover:text-gray-300 transition-colors"
+                          className="text-white hover:text-gray-300 transition-colors break-all"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-white">{item.value}</p>
+                        <p className="text-white break-words">{item.value}</p>
                       )}
                     </div>
                   </motion.div>
@@ -121,7 +124,7 @@ const Contact = () => {
 
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Connect With Me</h3>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 flex-wrap">
                 {[
                   {
                     icon: Github,
@@ -168,10 +171,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-gray-300 text-sm font-medium mb-2"
-                  >
+                  <label htmlFor="name" className="block text-gray-300 text-sm font-medium mb-2">
                     Name
                   </label>
                   <input
@@ -181,15 +181,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800/60 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 border border-white/20"
+                    className="w-full max-w-full px-4 py-3 bg-gray-800/60 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 border border-white/20"
                     placeholder="Your Name"
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-gray-300 text-sm font-medium mb-2"
-                  >
+                  <label htmlFor="email" className="block text-gray-300 text-sm font-medium mb-2">
                     Email
                   </label>
                   <input
@@ -199,15 +196,12 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800/60 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 border border-white/20"
+                    className="w-full max-w-full px-4 py-3 bg-gray-800/60 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 border border-white/20"
                     placeholder="your.email@example.com"
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-gray-300 text-sm font-medium mb-2"
-                  >
+                  <label htmlFor="message" className="block text-gray-300 text-sm font-medium mb-2">
                     Message
                   </label>
                   <textarea
@@ -217,7 +211,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-gray-800/60 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 resize-none border border-white/20"
+                    className="w-full max-w-full px-4 py-3 bg-gray-800/60 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 resize-none border border-white/20"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -232,7 +226,7 @@ const Contact = () => {
                   <span className="relative z-10">Send Message</span>
                 </motion.button>
 
-                {/* Success/Error Message */}
+                {/* Status Message */}
                 {statusMessage && (
                   <p
                     className={`text-sm mt-4 ${
