@@ -36,7 +36,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-black/95 backdrop-blur-md border-b border-white/20 shadow-lg shadow-white/10' 
+          ? 'bg-black/95 backdrop-blur-md' 
           : 'bg-transparent'
       }`}
     >
@@ -86,7 +86,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-black/95 backdrop-blur-md border-t border-white/20 rounded-b-lg"
+            className="md:hidden bg-black/95 backdrop-blur-md rounded-b-lg"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
