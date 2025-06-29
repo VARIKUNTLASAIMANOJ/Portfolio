@@ -22,7 +22,7 @@ export const projects: Project[] = [
     id: '2',
     title: 'ToxiDetect',
     description: 'Developed an AI-powered toxicity classification system using DistilBERT, enhancing detection of toxic comments (e.g., hate speech, threats) through natural language processing and deep learning techniques. Integrated features include text, audio, and image analysis, along with an intuitive web interface using Gradio for real-time predictions and a feedback mechanism for continuous improvement. Achieved high accuracy using metrics such as precision, recall.',
-    technologies: ['Python', 'D3.js', 'WebSocket', 'Express', 'PostgreSQL'],
+    technologies: ['Python'],
     liveUrl: '',
     codeUrl: 'https://github.com/VARIKUNTLASAIMANOJ/ToxiDetect',
 
