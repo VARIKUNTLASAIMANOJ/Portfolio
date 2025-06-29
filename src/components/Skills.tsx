@@ -8,7 +8,7 @@ const Skills = () => {
       title: 'Frontend Frameworks',
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
-      skills: ['React', /*'Vue.js'*/ /*'Angular'*/ 'Next.js']
+      skills: ['React', /*'Vue.js', 'Angular', 'Next.js'*/]
     },
     {
       title: 'Backend Frameworks',
@@ -26,7 +26,7 @@ const Skills = () => {
       title: 'Programming Languages',
       icon: Code,
       color: 'from-orange-500 to-red-500',
-      skills: ['JavaScript', /*'TypeScript'*/ 'Python', 'Java']
+      skills: [/*'JavaScript', 'TypeScript'*/ 'Python', 'Java']
     },
     {
       title: 'Database Technologies',
@@ -50,7 +50,7 @@ const Skills = () => {
       title: 'Web Technologies',
       icon: Globe,
       color: 'from-yellow-500 to-amber-500',
-      skills: ['HTML5', 'CSS3', 'Tailwind CSS']
+      skills: ['HTML5', 'CSS3'/*, 'Tailwind CSS'*/]
     }
   ];
 
