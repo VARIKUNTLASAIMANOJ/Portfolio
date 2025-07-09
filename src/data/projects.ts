@@ -46,14 +46,14 @@ export const projects: Project[] = [
     codeUrl: 'https://github.com/VARIKUNTLASAIMANOJ/Beyond-Horizon',
     featured: true
   },
-  {
+ {
     id: '5',
-    title: 'Social Media Analytics Tool',
-    description: 'Comprehensive social media analytics platform with sentiment analysis and engagement tracking.',
-    technologies: ['Vue.js', 'Python', 'NLP', 'Redis', 'Chart.js'],
-    liveUrl: 'https://example.com/project5',
-    codeUrl: 'https://github.com/username/project5',
-    featured: false
+    title: 'QuizWise',
+    description: 'QuizWise is a AI - powered quiz platform that enables users to create, manage, and take interactive quizzes with a modern UI and real-time backend logic. It is built with Python, React, TailwindCSS, and Vite, offering a scalable solution for educational or entertainment-based quizzes.',
+    technologies: ['React', 'Tailwind CSS', 'Vite', 'Python', 'FastAPI', 'Google API(Scripts)'],
+    liveUrl: 'https://quizwise-m.vercel.app/',
+    codeUrl: 'https://github.com/VARIKUNTLASAIMANOJ/QuizWise',
+    featured: true
   },
   {
     id: '6',
