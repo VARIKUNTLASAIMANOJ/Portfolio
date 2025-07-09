@@ -88,7 +88,7 @@ const Contact = () => {
                   {
                     icon: Phone,
                     label: 'Phone',
-                    value: '+91-9100161401',
+                    value: '+91-91#######1',
                     href: 'tel:+91-9100161401'
                   },
                   { icon: MapPin, label: 'Location', value: 'Hyderabad, India', href: null }
