@@ -30,17 +30,19 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold text-white mb-6">Who I Am</h3>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-             A lazy old school boy in this Gen Z world who is very passionate about exploring the
-             deep technology and the world.
+             "A dedicated learner with a passion for deep technology and innovation."
             </p>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              My journey began when I discovered my love for web development and
-              artificial intelligence & machine learning. Over the years,
-              I've transformed my curiosity into reality by working on projects that challenge and inspire me.
+             My professional journey commenced with a strong interest in web development and artificial intelligence & machine learning. Since then, 
+             I have continuously honed my skills, translating curiosity into impactful projects that challenge conventional boundaries and drive technological advancement.
             </p>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              When I'm not working, you'll find me doing some crazy stuff which may be terrifying 
-              but there will be a lot of fun in it.
+              I am particularly drawn to exploring complex systems and emerging technologies, striving to create solutions that are both innovative and meaningful.
+            </p>
+
+            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+              Beyond my professional pursuits, I value experiences that push me out of my comfort zone. Whether it's through adventurous activities or new learning opportunities, 
+              I believe growth often comes from embracing the unfamiliar.
             </p>
 
             <motion.a
