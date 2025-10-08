@@ -8,25 +8,25 @@ const Skills = () => {
       title: 'Frontend Frameworks',
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
-      skills: ['React', /*'Vue.js', 'Angular', 'Next.js'*/]
+      skills: ['React.js', /*'Vue.js'*/ /*'Angular'*/ /*'Next.js'*/]
     },
     {
       title: 'Backend Frameworks',
       icon: Globe,
       color: 'from-green-500 to-emerald-500',
-      skills: ['Node.js', 'Express.js', /*'Django'*/ 'Flask']
+      skills: [/*'Node.js'*/, /*'Express.js'*/, /*'Django'*/ 'Flask']
     },
     {
       title: 'AI/ML Frameworks',
       icon: Cpu,
       color: 'from-purple-500 to-violet-500',
-      skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Keras']
+      skills: ['Numpy', 'Pandas', 'Matplolib', 'NLP']
     },
     {
       title: 'Programming Languages',
       icon: Code,
       color: 'from-orange-500 to-red-500',
-      skills: [/*'JavaScript', 'TypeScript'*/ 'Python', 'Java']
+      skills: [/*'JavaScript'*/, /*'TypeScript'*/ 'Python', 'Java']
     },
     {
       title: 'Database Technologies',
@@ -44,16 +44,16 @@ const Skills = () => {
       title: 'Development Tools',
       icon: Wrench,
       color: 'from-pink-500 to-rose-500',
-      skills: ['Git', 'Vite']
+      skills: ['Git', /*'Vite'*/, 'Postman']
     },
     {
       title: 'Web Technologies',
       icon: Globe,
       color: 'from-yellow-500 to-amber-500',
-      skills: ['HTML5', 'CSS3'/*, 'Tailwind CSS'*/]
+      skills: ['HTML5', 'CSS3', /*'Tailwind CSS'*/]
     }
   ];
-
+  
   return (
     <section id="skills" className="py-20 relative overflow-hidden bg-black">
       <SpaceParticles />
