@@ -46,7 +46,7 @@ const About = () => {
             </p>
 
             <motion.a
-              href="/varikuntla_sai_manoj_resume.pdf"
+              href="/VarikuntlaSaiManoj_Resume.pdf"
               download
               className="inline-flex items-center px-8 py-4 bg-white text-black rounded-xl font-semibold shadow-lg hover:shadow-white/30 transition-all duration-300 group relative overflow-hidden border-2 border-white"
               whileHover={{ scale: 1.05, y: -2 }}
