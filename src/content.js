@@ -24,7 +24,7 @@ export default {
     photoTags: ['Hyderabad', 'Open to AI engineering roles'], // little chips floating on the photo
     aboutTitle: 'Behind the run',
     about: [
-      'I work on the messy middle between AI research and real-world software: getting the right context, making outputs trustworthy, and turning model capabilities into systems that actually work. Most of the interesting problems live in the details.',
+      'I’m interested in building AI agents that can do more than call tools and generate text. I enjoy figuring out how retrieval, orchestration, evaluation, and failure handling fit together to make systems genuinely useful beyond a controlled environment.',
     ],
     facts: [
       { label: 'Based in', value: 'Hyderabad, India' },
