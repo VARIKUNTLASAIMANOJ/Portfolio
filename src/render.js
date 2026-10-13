@@ -47,8 +47,8 @@ function header(c, sections) {
     .join('');
   return `<header class="site-header">
     <nav class="nav-pill" aria-label="Main">
-      <a class="brand" href="#top" aria-label="${esc(c.person.name)}, back to top">
-        <span class="brand-mark">${esc(c.person.initials)}</span><span class="brand-name">${esc(c.person.name)}</span>
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">${esc(c.person.initials)}</span><span class="brand-name">${esc(c.person.name)}</span><span class="visually-hidden">, back to top</span>
       </a>
       <ul class="nav-links" id="nav-links">${nav}</ul>
       <div class="nav-actions">
@@ -63,7 +63,7 @@ function header(c, sections) {
 function rail(sections) {
   const steps = sections
     .map(
-      (s) => `<li class="trace-step" data-agent="${s.agent}" data-for="${s.id}" data-state="upcoming">
+      (s, k) => `<li class="trace-step" data-agent="${s.agent}" data-for="${s.id}" data-state="upcoming" style="--i:${k}">
         <a href="#${s.id}">
           <span class="trace-dot" aria-hidden="true"></span>
           <span class="trace-tip">
@@ -97,7 +97,7 @@ function portrait(p) {
   const tags = (p.photoTags ?? []).filter(present);
   return `<figure class="portrait${isSlot(p.photo) ? ' is-empty' : ''}">
     <span class="portrait-frame">
-      ${isSlot(p.photo) ? `<span class="portrait-slot">${esc(p.photo)}</span>` : `<img src="${esc(p.photo)}" alt="${esc(p.name)}" decoding="async" fetchpriority="high">`}
+      ${isSlot(p.photo) ? `<span class="portrait-slot">${esc(p.photo)}</span>` : `<img src="${esc(p.photo)}" alt="${esc(p.name)}" width="480" height="600" decoding="async" fetchpriority="high">`}
     </span>
     ${tags.map((t, i) => `<span class="portrait-tag" data-pos="${i}">${i === 0 ? icon('pin') : glyph('router')}${esc(t)}</span>`).join('')}
   </figure>`;
@@ -109,7 +109,7 @@ function hero(c) {
     <div class="hero-inner container${present(p.photo) ? '' : ' no-photo'}">
       <div class="hero-copy">
         <h1 id="top-h"><span class="h1-name">I’m ${esc(p.name)},</span> <span class="h1-role">${esc(p.role)}.</span></h1>
-        <p class="hero-intro">${esc(p.intro)}</p>
+        ${present(p.intro) ? `<p class="hero-intro">${esc(p.intro)}</p>` : ''}
         ${present(p.status) ? `<p class="status-pill"><span class="live-dot" aria-hidden="true"></span>${esc(p.status)}</p>` : ''}
       </div>
       ${portrait(p)}
@@ -412,7 +412,7 @@ function certs(c) {
             </span>
           </span>`;
       return `<li class="cert-slide" data-i="${i}" data-pos="${i === 0 ? 'center' : i === 1 ? 'next' : i === list.length - 1 ? 'prev' : 'hidden'}">
-        <button class="cert-card" type="button" aria-label="Certificate ${i + 1} of ${list.length}: ${esc(x.name)}, ${esc(x.issuer)}">${face}</button>
+        <button class="cert-card" type="button"><span class="visually-hidden">Certificate ${i + 1} of ${list.length}: </span>${face}</button>
       </li>`;
     })
     .join('');
@@ -525,6 +525,16 @@ function agentDock(c) {
 
 // skills live inside the hero now, so the section itself renders nothing
 const RENDER = { top: hero, about, skills: () => '', projects, log, experience, checkpoints, certs, contact };
+
+// Content as written may use shortcuts (skills as plain strings); settle them
+// once, for both the browser and the build-time prerender.
+export function prepare(c) {
+  c.skills = (c.skills ?? []).map((g) => ({
+    ...g,
+    items: (g.items ?? []).map((s) => (typeof s === 'string' ? { name: s, level: null, icon: null } : s)),
+  }));
+  return c;
+}
 
 export function renderPage(c) {
   const html = {};
