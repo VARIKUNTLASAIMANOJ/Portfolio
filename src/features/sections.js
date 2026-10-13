@@ -56,3 +56,28 @@ export function initTimeline() {
   if (reducedMotion()) return (tl.dataset.state = 'in');
   onceInView([tl], () => (tl.dataset.state = 'in'), 0.25);
 }
+
+// Experience: a glowing blob travels down the timeline with the reader, the
+// line fills behind it, and each role's dot lights up as the blob reaches it.
+export function initRolePath() {
+  const roles = $('.roles');
+  if (!roles) return;
+  const blob = document.createElement('span');
+  blob.className = 'roles-blob';
+  blob.setAttribute('aria-hidden', 'true');
+  roles.append(blob);
+  const dots = $$('.role-dot', roles);
+  const TOP = 18; // where the line starts, inside the list
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const box = roles.getBoundingClientRect();
+    const y = Math.min(Math.max(innerHeight * 0.45 - box.top, TOP), box.height - 10);
+    roles.style.setProperty('--blob', `${y.toFixed(1)}px`);
+    dots.forEach((d) => d.classList.toggle('is-reached', d.closest('.role').offsetTop + d.offsetTop + d.offsetHeight / 2 <= y + 1));
+  };
+  const queue = () => ticking || ((ticking = true), requestAnimationFrame(update));
+  addEventListener('scroll', queue, { passive: true });
+  addEventListener('resize', queue);
+  update();
+}
