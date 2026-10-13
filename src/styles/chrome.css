@@ -240,17 +240,6 @@
   font-size: 0.8125rem;
   font-weight: 680;
 }
-.trace-log {
-  color: var(--text-dim);
-  font-size: 0.6875rem;
-}
-.trace-time {
-  color: var(--agent-ink);
-  font-size: 0.6875rem;
-}
-.trace-time:empty {
-  display: none;
-}
 /* the packet: sits inside the active ring, glides to the next one */
 .trace-packet {
   position: absolute;
