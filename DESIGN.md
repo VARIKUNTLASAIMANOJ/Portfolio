@@ -25,25 +25,25 @@ colors:
 typography:
   display:
     fontFamily: "Bricolage Grotesque, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(3rem, 1.4rem + 4.8vw, 6rem)"
+    fontSize: "clamp(2.5rem, 1rem + 3.6vw, 4.5rem)"
     fontWeight: 790
     lineHeight: 0.96
     letterSpacing: "-0.04em"
   headline:
     fontFamily: "Bricolage Grotesque, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2.5rem, 1.6rem + 2.8vw, 4.25rem)"
+    fontSize: "clamp(2rem, 1rem + 2.2vw, 3.25rem)"
     fontWeight: 780
     lineHeight: 1
     letterSpacing: "-0.04em"
   title:
     fontFamily: "Bricolage Grotesque, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(1.625rem, 1.25rem + 1.1vw, 2.25rem)"
+    fontSize: "clamp(1.375rem, 1.05rem + 0.75vw, 1.75rem)"
     fontWeight: 780
     lineHeight: 1.05
     letterSpacing: "-0.035em"
   body:
     fontFamily: "Bricolage Grotesque, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "1.0625rem"
+    fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
   label:
@@ -63,7 +63,7 @@ spacing:
   s3: "24px"
   s4: "32px"
   s5: "48px"
-  section: "136px"
+  section: "104px"
   section-mobile: "88px"
 components:
   button-primary:
@@ -86,7 +86,7 @@ components:
     backgroundColor: "{colors.sheet-white}"
     textColor: "{colors.ink}"
     rounded: "14px"
-    width: "136px"
+    width: "120px"
     height: "52px"
   project-card:
     backgroundColor: "{colors.lane-violet}"
@@ -109,7 +109,7 @@ components:
 
 The page is a product launch for one engineer, run on an agent graph. A huge two-line headline and a portrait open it, with the skills gliding underneath on an endless circuit strip where current flows pad to pad; projects open one at a time from a thumbnail rail, wired into a big preview of their architecture; certificates come forward in a wired carousel; checkpoints run along a horizontal timeline; the page closes on "Let's talk": underline fields beside a hairline list of direct lines. A small mascot agent answers questions from anywhere on the page.
 
-Light is the default world: cool paper, ink type, a lavender hero field with a node-editor dot grid, and four pastel lanes. Dark is a deep navy with violet light. Both share one grammar of pills, rounded cards and dashed edges with packets.
+Light is the default world: cool paper, ink type, a node-editor dot grid under the whole page (darker in light, brighter in dark, still quiet) with a lavender wash over the hero, and four pastel lanes. Dark is a deep navy with violet light. Both share one grammar of pills, rounded cards and dashed edges with packets.
 
 **Key Characteristics:**
 - Heavy, tight display type (Bricolage Grotesque 780–790, −0.04em) at up to 96px.
@@ -152,10 +152,10 @@ A neutral paper ground with a violet voice, four pastel lanes, and five signal h
 **Character:** A friendly, slightly quirky grotesk pushed to heavy weights for presence, calm at text sizes thanks to its optical-size axis; a crisp mono for the machine's voice.
 
 ### Hierarchy
-- **Display** (790, up to 96px, 0.96): the hero headline only, name on one line and role in violet on the next.
-- **Headline** (780, up to 68px, 1.0): section headings, with the owning agent's glyph before them.
-- **Title** (780, up to 36–48px): project names and role titles.
-- **Body** (400, 17px, 1.6): reading text; About's lead paragraph runs at 21–24px, weight 560.
+- **Display** (790, up to 72px, 0.96): the hero headline only, name on one line and role in violet on the next.
+- **Headline** (780, up to 52px, 1.0): section headings, with the owning agent's glyph before them.
+- **Title** (780, up to 28–40px): project names and role titles.
+- **Body** (400, 16px, 1.6): reading text; About's lead paragraph runs at 18–22px, weight 560. The scale was taken down a step (it read like 120% zoom at 100%).
 - **Label** (mono, 12px; 11px inside graph nodes): function signatures, run status, trace logs, record field labels (Based in, Currently).
 
 ### Named Rules
@@ -165,7 +165,7 @@ A neutral paper ground with a violet voice, four pastel lanes, and five signal h
 
 ## Layout
 
-A centered 1232px container with fluid gutters (16–48px). A floating pill nav sits 14px from the top. Sections are separated by 136px (88px on phones). The hero is two columns (copy left, portrait right) and stacks below 900px; the skills circuit strip closes the hero at container width. Projects put thumbnails and details left and the preview right. The page has no native scrollbar: the trace rail on the right is the scrollbar.
+A centered 1232px container with fluid gutters (16–48px); from 1100px wide it grows to fill the screen up to 1320px while keeping a 136px lane free on each side for the trace rail's labels. A floating pill nav sits 14px from the top. Sections are separated by 104px (72px on phones). The hero is two columns (copy left, portrait right) and stacks below 900px; the skills circuit strip closes the hero at container width. Projects put thumbnails and details left and the preview right. The page has no native scrollbar: the trace rail on the right is the scrollbar.
 
 Responsive changes:
 - 768px and up: the trace rail shows on the right edge (20px in from 1280px, 14px below).
@@ -200,13 +200,16 @@ The hero carries no buttons or social icons: the name, intro and availability pi
 A dark circuit strip in both themes, under the hero. Every skill sits on one unbroken circuit: 56px rings zig-zagging between two rows (logo or monogram, name below), joined by 3px light-gray traces that run flat, bend 45°, and run flat again, at an even 168px step. Dots of current flow along the whole trace, colored by the lane of the group they're passing through, so groups read as color changes, never as breaks. The circuit is copied end to end and the last skill wires straight into the first, so the loop has no seam (an odd count adds a small via to keep the zig-zag rhythm). It glides left forever (34px/s); hovering stops it so a name can be read, a drag scrubs it, and it pauses off screen. Skills are read straight off the strip (no hover card); a hovered ring lifts and glows in its lane. With reduced motion it stands still and scrolls sideways by hand or keyboard.
 
 ### Project browser (signature)
-A rail of 136px thumbnails (screenshot, or lane-gradient art with initials) acting as tabs. The chosen one gets a lane ring; its details open below (signature, title, status, summary, tags, links) and its big preview opens on the right (screenshot, or the architecture diagram on a dot grid, with a switch when both exist). A wire with flowing current runs from the chosen thumbnail down and across into the preview, redrawing itself on every pick.
+A rail of 120px thumbnails (screenshot, or lane-gradient art with initials) acting as tabs. The chosen one gets a lane ring; its details open below (signature, title, status, summary, tags, links) and its big preview opens on the right (screenshot, or the architecture diagram on a dot grid, with a switch when both exist). A wire with flowing current runs from the chosen thumbnail down and across into the preview, redrawing itself on every pick.
 
 ### Certificate carousel (signature)
 One certificate in focus with a blue-to-violet gradient border; neighbours either side, smaller, desaturated, offset low and high. A dashed blue wire with a dot links the previous card in; a solid violet wire with a ring leads out to the next. Arrows, dots, arrow keys, swipe, or a click on a neighbour move it; phones show one card at a time. Missing images draw a paper stand-in (ribbon, seal, issuer, title, date); the seal carries the issuer's real logo on a white disc when one is set (Postman, GDSC's bracket mark, AWS), or the issuer's initials.
 
 ### Chat assistant (signature)
 A floating robot in the bottom-right corner: glossy blue-to-violet head, dark visor with glowing eyes and a smile, antenna ball, ear pieces, a waving arm, and a soft shadow; it floats gently and blinks. A white "Hello!" speech bubble (heavy blue type) always sits beside the robot like a label (clicking it opens the chat) and hides while the chat is open; the robot waves on hover. It opens a 390px chat (a bottom sheet on phones): a header with the robot avatar, "<first name>'s assistant" and a live dot; agent bubbles on the left, visitor bubbles in ink on the right; while an answer is being worked out, the four agent glyphs pulse in turn. Replies stream in word by word with a safe markdown subset (paragraphs, lists, bold) and links only to page anchors or URLs that appear in the content.
+
+### Experience path
+Roles hang off a vertical line. A glowing violet blob travels down it with the reader (pinned to 45% of the viewport), the line fills in solid behind it, and each role's hollow dot fills as the blob reaches it; a ring pulses off the blob unless motion is reduced.
 
 ### Checkpoints (horizontal timeline)
 One line runs left to right, oldest to latest, ending in an arrowhead. Each milestone is a hollow node on the line, ringed in its type's lane (education sky, award peach, publication violet, certification lime), with a short stem to its card; cards alternate above and below the line, and the year sits on the free side of each node. Cards are lane-tinted (20px radius, lane border, lane-tinted secondary text): a small icon tile and the type, the title, the detail and a link pill ("Read paper"). Columns are at least 200px; with too many milestones the timeline scrolls sideways. The one authored moment: the line draws forward when first seen and each milestone arrives as it passes. Phones turn it vertical, newest at the top, with the year inside each card.
@@ -218,7 +221,7 @@ No boxes. A 6rem "Let's talk." headline and the lead, then two columns. Left: th
 Hero and chat: pill inputs on mist, violet border on focus. Contact: transparent underline fields as described above.
 
 ### Navigation
-Floating pill: violet brand mark plus name, section links, theme toggle and a "Let's talk" primary pill. The right-edge trace rail replaces the native scrollbar and marks the visit (hovering a dot shows just the section name): hollow upcoming dots, filled done dots, and a haloed active dot holding the packet, which glides to the next node when the section changes. Drag along the rail to scrub the page; click the wire to jump; click a node to go to its section.
+Floating pill: violet brand mark plus name, section links, theme toggle and a "Let's talk" primary pill. It lives over the hero only: once the hero is passed it slides up out of the way (on screens under 1100px it returns when scrolling up; keyboard focus always brings it back). From there the right-edge trace rail is the navigation: it replaces the native scrollbar, and on wide screens every step shows its name beside its dot (the current one bold in its agent's ink). Done dots are filled, upcoming ones hollow, and the active one holds the packet, which glides to the next node when the section changes. Drag along the rail to scrub the page; click the wire to jump; click a name or dot to go to its section.
 
 ## Do's and Don'ts
 
