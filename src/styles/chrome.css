@@ -16,6 +16,19 @@
   padding: 0 16px;
   pointer-events: none;
 }
+/* past the hero the bar steps away (keyboard focus brings it back) */
+.site-header {
+  transition:
+    transform 0.45s var(--ease-out),
+    opacity 0.3s;
+}
+.site-header[data-hidden='true']:not(:focus-within) {
+  opacity: 0;
+  transform: translateY(calc(-100% - 24px));
+}
+.site-header[data-hidden='true']:not(:focus-within) .nav-pill {
+  pointer-events: none;
+}
 .nav-pill {
   pointer-events: auto;
   position: relative;
@@ -54,7 +67,8 @@
   padding: 0 8px;
   border-radius: 12px;
   background: var(--a-router);
-  color: #fff;
+  /* ink that clears 4.5:1 on violet in both themes */
+  color: var(--on-text);
   font-weight: 760;
   font-size: 0.8125rem;
   letter-spacing: 0.01em;
@@ -240,6 +254,31 @@
   font-size: 0.8125rem;
   font-weight: 680;
 }
+/* past the hero, wide screens show every step's name beside its dot */
+@media (min-width: 1100px) {
+  .trace[data-labels='true'] .trace-tip {
+    padding: 2px 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    opacity: 1;
+    transform: translate(0, -50%);
+    transition-delay: calc(var(--i, 0) * 35ms);
+  }
+  .trace[data-labels='true'] .trace-label {
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    font-weight: 560;
+    transition: color 0.2s;
+  }
+  .trace[data-labels='true'] .trace-step[data-state='active'] .trace-label {
+    color: var(--agent-ink);
+    font-weight: 720;
+  }
+  .trace[data-labels='true'] .trace-step a:hover .trace-label {
+    color: var(--text);
+  }
+}
 /* the packet: sits inside the active ring, glides to the next one */
 .trace-packet {
   position: absolute;
@@ -334,9 +373,9 @@
 .agent-launch {
   display: grid;
   place-items: center;
-  width: 92px;
-  height: 100px;
-  border-radius: 28px;
+  width: 80px;
+  height: 88px;
+  border-radius: 24px;
   transition: transform 0.3s var(--ease-out);
 }
 .agent-launch:hover {
@@ -347,8 +386,8 @@
   outline-offset: 2px;
 }
 .mascot-launch {
-  width: 88px;
-  height: 97px;
+  width: 76px;
+  height: 84px;
   filter: drop-shadow(0 10px 16px rgb(60 50 180 / 0.28));
 }
 .agent-dock[data-open='true'] .mascot-launch {
@@ -359,13 +398,13 @@
 /* the speech bubble */
 .agent-hello {
   position: absolute;
-  right: 74px;
-  bottom: 74px;
-  padding: 10px 18px;
-  border-radius: 20px;
+  right: 66px;
+  bottom: 66px;
+  padding: 8px 15px;
+  border-radius: 18px;
   background: #fff;
   color: #3b4fd8;
-  font-size: 1.375rem;
+  font-size: 1.1875rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   white-space: nowrap;
@@ -399,7 +438,7 @@
 .agent-panel {
   position: absolute;
   right: 0;
-  bottom: 104px;
+  bottom: 92px;
   display: flex;
   flex-direction: column;
   width: 390px;
