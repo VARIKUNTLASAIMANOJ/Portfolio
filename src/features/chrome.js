@@ -33,8 +33,31 @@ export function initHeader() {
   const header = $('.site-header');
   const menuBtn = $('.menu-toggle');
   const list = $('#nav-links');
-  const onScroll = () => (header.dataset.scrolled = scrollY > 24);
-  addEventListener('scroll', onScroll, { passive: true });
+  const hero = $('#top');
+  const rail = $('.trace');
+  const wide = matchMedia('(min-width: 1100px)');
+  let lastY = scrollY;
+  let ticking = false;
+  // Past the hero, the trace rail takes over navigation: its labels appear
+  // and the bar steps out of the way so it never sits on a section. Where the
+  // rail has no labels (narrower screens), the bar returns on scroll up.
+  const onScroll = () => {
+    ticking = false;
+    const y = scrollY;
+    const past = hero ? hero.getBoundingClientRect().bottom < header.offsetHeight + 28 : y > 400;
+    header.dataset.scrolled = String(y > 24);
+    let hide = header.dataset.hidden === 'true';
+    if (!past || header.dataset.menu === 'open') hide = false;
+    else if (wide.matches) hide = true;
+    // narrow screens: follow the scroll direction, ignoring tiny jitters
+    else if (y > lastY + 4) hide = true;
+    else if (y < lastY - 4) hide = false;
+    header.dataset.hidden = String(hide);
+    if (rail) rail.dataset.labels = String(past);
+    if (Math.abs(y - lastY) > 4) lastY = y;
+  };
+  addEventListener('scroll', () => ticking || ((ticking = true), requestAnimationFrame(onScroll)), { passive: true });
+  wide.addEventListener('change', onScroll);
   onScroll();
 
   const close = () => {
