@@ -68,8 +68,6 @@ function rail(sections) {
           <span class="trace-dot" aria-hidden="true"></span>
           <span class="trace-tip">
             <span class="trace-label">${esc(s.label)}</span>
-            <span class="trace-log mono" aria-hidden="true">state.section = "${s.id === 'top' ? 'start' : s.id}"</span>
-            <span class="trace-time mono" aria-hidden="true"></span>
           </span>
         </a>
       </li>`,
