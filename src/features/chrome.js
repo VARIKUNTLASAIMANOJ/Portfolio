@@ -66,8 +66,6 @@ export function initRail() {
   const segs = $$('.progress-seg');
   const packet = $('.trace-packet');
   const sections = steps.map((s) => document.getElementById(s.dataset.for));
-  const reached = new Set();
-  const t0 = performance.now();
   const line = () => innerHeight * 0.35;
   const docTop = (el) => el.getBoundingClientRect().top + scrollY;
   let active = -1;
@@ -92,11 +90,6 @@ export function initRail() {
       else link.removeAttribute('aria-current');
     });
     if (packet) packet.dataset.agent = steps[i].dataset.agent;
-    const id = sections[i].id;
-    if (!reached.has(id)) {
-      reached.add(id);
-      $('.trace-time', steps[i]).textContent = `t+${((performance.now() - t0) / 1000).toFixed(1)}s`;
-    }
   }
 
   function update() {
