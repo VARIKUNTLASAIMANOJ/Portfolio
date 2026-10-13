@@ -85,7 +85,7 @@ Without EmailJS IDs, the form falls back to `contact.endpoint` in `src/content.j
 
 ## Deploying
 
-`npm run build` outputs plain static files in `dist/`. They work on GitHub Pages, Netlify, Vercel or any static host. If the site will live under a subpath (like `username.github.io/portfolio/`), set `base` in a `vite.config.js`.
+`npm run build` outputs plain static files in `dist/`. The page is rendered into `index.html` at build time (so it paints before any script runs), the stylesheet is inlined, and `robots.txt`, `sitemap.xml` and link-preview tags are generated from `meta` in `content.js`: keep `meta.url` set to the live address and `meta.image` to the picture shown when the link is shared. The output works on Vercel (which also runs the chat function) or any static host. If the site will live under a subpath (like `username.github.io/portfolio/`), set `base` in `vite.config.js`.
 
 ## Design
 
