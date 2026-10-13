@@ -13,7 +13,7 @@ export default {
     title: 'Sai Manoj · AI Engineer',
     description: 'Sai Manoj Varikuntla, AI/ML engineer in Hyderabad. Semantic search, RAG and document retrieval systems.',
     url: 'https://saimanojvarikuntla-portfolio.vercel.app', // the live address, for link previews and the sitemap
-    image: '/image.png', // the picture shown when the link is shared
+    image: 'public/image.webp', // the picture shown when the link is shared
   },
 
   person: {
