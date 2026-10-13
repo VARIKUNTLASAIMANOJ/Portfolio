@@ -218,7 +218,7 @@ No boxes. A 6rem "Let's talk." headline and the lead, then two columns. Left: th
 Hero and chat: pill inputs on mist, violet border on focus. Contact: transparent underline fields as described above.
 
 ### Navigation
-Floating pill: violet brand mark plus name, section links, theme toggle and a "Let's talk" primary pill. The right-edge trace rail replaces the native scrollbar and logs the visit: hollow upcoming dots, filled done dots, and a haloed active dot holding the packet, which glides to the next node when the section changes. Drag along the rail to scrub the page; click the wire to jump; click a node to go to its section.
+Floating pill: violet brand mark plus name, section links, theme toggle and a "Let's talk" primary pill. The right-edge trace rail replaces the native scrollbar and marks the visit (hovering a dot shows just the section name): hollow upcoming dots, filled done dots, and a haloed active dot holding the packet, which glides to the next node when the section changes. Drag along the rail to scrub the page; click the wire to jump; click a node to go to its section.
 
 ## Do's and Don'ts
 
