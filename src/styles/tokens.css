@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('/fonts/bricolage.woff2') format('woff2-variations'), url('/fonts/bricolage.woff2') format('woff2');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/jetbrains-mono.woff2') format('woff2-variations'), url('/fonts/jetbrains-mono.woff2') format('woff2');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- light: cool paper, ink type, pastel lanes ---------- */
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f5f5f8;
+  --surface: #ffffff;
+  --surface-2: #eeeef3;
+  --line: #e1e2ea;
+  --edge: #a3a6b8;
+  --text: #101118;
+  --text-dim: #5b5e6e;
+  --on-text: #ffffff;
+
+  --hero-a: #d9d4fb;
+  --hero-b: #ebe8fd;
+  --dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Ccircle cx='1.5' cy='1.5' r='1.1' fill='%23101118' fill-opacity='.10'/%3E%3C/svg%3E");
+
+  /* agents: graphics value (>=3:1) and ink for text (>=4.5:1) */
+  --a-router: #5b4ddb;
+  --a-retriever: #2a8fd0;
+  --a-validator: #5f9a22;
+  --a-writer: #101118;
+  --a-human: #e2583a;
+  --ink-router: #5b4ddb;
+  --ink-retriever: #1d6fa5;
+  --ink-validator: #44721a;
+  --ink-writer: #101118;
+  --ink-human: #b8401f;
+  --warn: #c77712;
+  --ink-warn: #94560a;
+
+  /* lanes: a project's or tool group's own color */
+  --lane-violet: #e9e5fd;
+  --lane-violet-line: #d2cbfa;
+  --lane-violet-ink: #4a3dc4;
+  --lane-lime: #eef8c8;
+  --lane-lime-line: #d5eb8f;
+  --lane-lime-ink: #456e12;
+  --lane-peach: #fde4d9;
+  --lane-peach-line: #f7c6b0;
+  --lane-peach-ink: #a8421d;
+  --lane-sky: #dcf0fb;
+  --lane-sky-line: #b4dbf3;
+  --lane-sky-ink: #1d6fa5;
+
+  --shadow-sm: 0 1px 2px rgb(16 17 24 / 0.06), 0 4px 12px -6px rgb(16 17 24 / 0.12);
+  --shadow-lg: 0 2px 4px rgb(16 17 24 / 0.04), 0 24px 48px -24px rgb(16 17 24 / 0.28);
+
+  --mascot-head: #101118;
+  --mascot-face: #2a2c3b;
+  --mascot-eye: #c9f06b;
+}
+
+/* ---------- dark: deep navy with violet light ---------- */
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #090b1a;
+  --surface: #12152b;
+  --surface-2: #1a1e3a;
+  --line: #262b4d;
+  --edge: #5a618f;
+  --text: #ecedf6;
+  --text-dim: #a1a5c2;
+  --on-text: #090b1a;
+
+  --hero-a: #1f1a55;
+  --hero-b: #121035;
+  --dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Ccircle cx='1.5' cy='1.5' r='1.1' fill='%23a1a5d2' fill-opacity='.14'/%3E%3C/svg%3E");
+
+  --a-router: #9184ff;
+  --a-retriever: #5bc0eb;
+  --a-validator: #9bd35a;
+  --a-writer: #ecedf6;
+  --a-human: #ff8a66;
+  --ink-router: #a79cff;
+  --ink-retriever: #6fcbf0;
+  --ink-validator: #a8dc6c;
+  --ink-writer: #ecedf6;
+  --ink-human: #ff9d80;
+  --warn: #f0b45a;
+  --ink-warn: #f4c37a;
+
+  --lane-violet: #1d1a46;
+  --lane-violet-line: #352f7a;
+  --lane-violet-ink: #b6adff;
+  --lane-lime: #18240f;
+  --lane-lime-line: #33501c;
+  --lane-lime-ink: #bde27f;
+  --lane-peach: #2a1915;
+  --lane-peach-line: #5a3025;
+  --lane-peach-ink: #ffb197;
+  --lane-sky: #0f2136;
+  --lane-sky-line: #1f4a6e;
+  --lane-sky-ink: #94d4f6;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4), 0 4px 12px -6px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.3), 0 24px 48px -24px rgb(0 0 0 / 0.7);
+
+  --mascot-head: #ecedf6;
+  --mascot-face: #1a1e3a;
+  --mascot-eye: #c9f06b;
+}
+
+:root {
+  --font: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --mono-font: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --fs-h1: clamp(3rem, 1.4rem + 4.8vw, 6rem);
+  --fs-h2: clamp(2.5rem, 1.6rem + 2.8vw, 4.25rem);
+  --fs-h3: clamp(1.625rem, 1.25rem + 1.1vw, 2.25rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.9375rem;
+  --fs-mono: 0.75rem;
+
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+
+  --section-pad: 136px;
+  --gutter: clamp(16px, 4vw, 48px);
+  --nav-h: 60px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* each agent's color, scoped to whatever it owns */
+[data-agent='router'] { --agent: var(--a-router); --agent-ink: var(--ink-router); }
+[data-agent='retriever'] { --agent: var(--a-retriever); --agent-ink: var(--ink-retriever); }
+[data-agent='validator'] { --agent: var(--a-validator); --agent-ink: var(--ink-validator); }
+[data-agent='writer'] { --agent: var(--a-writer); --agent-ink: var(--ink-writer); }
+[data-agent='human'] { --agent: var(--a-human); --agent-ink: var(--ink-human); }
+
+/* each lane's three tones; secondary text on a lane is tinted from its ink */
+[data-lane='violet'] { --lane: var(--lane-violet); --lane-line: var(--lane-violet-line); --lane-ink: var(--lane-violet-ink); }
+[data-lane='lime'] { --lane: var(--lane-lime); --lane-line: var(--lane-lime-line); --lane-ink: var(--lane-lime-ink); }
+[data-lane='peach'] { --lane: var(--lane-peach); --lane-line: var(--lane-peach-line); --lane-ink: var(--lane-peach-ink); }
+[data-lane='sky'] { --lane: var(--lane-sky); --lane-line: var(--lane-sky-line); --lane-ink: var(--lane-sky-ink); }
+:is(.work-card, .tool-group, .product)[data-lane] { --text-dim: color-mix(in oklab, var(--lane-ink) 62%, var(--text)); }
+
+@media (max-width: 767px) {
+  :root {
+    --section-pad: 88px;
+  }
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      // pick the theme before first paint: saved choice, else the system's
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+  </head>
+  <body>
+    <!--
+      THESIS: The visit is a run through an agent graph, told with the confidence of a product launch: huge type, pastel lanes, a live graph you can question. Refuses the gray dev portfolio of avatar, gradient blob and identical cards.
+      OWN-WORLD: Light: cool paper (#f5f5f8), ink type, lavender hero field with a node-editor dot grid, pastel lanes (violet, lime, peach, sky) for projects and tool groups. Dark: deep navy (#090b1a) with violet light. Bricolage Grotesque at 780+ for display, JetBrains Mono for signatures and traces. Pill controls, 24-32px cards, dashed edges with packets.
+      STORY: A recruiter reads who this is in one line, watches skills glide past on a live circuit strip, opens projects one by one with their architecture, sees shipping activity, a timeline and a certificate carousel, and ends at a dark panel where the run waits on a human. A mascot agent answers from anywhere.
+      FIRST VIEWPORT: Floating pill nav. Left: two-line 96px headline (name, role in violet), intro, résumé + Ask my agent pills, availability pill and socials. Right: portrait on a tilted lane card with floating tags. Under both, a dark circuit strip of skills glides left forever.
+      FORM: user-pinned by references (bhuvansai-portfolio, Dribbble 24570927); no roll. Seed key: none.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+    -->
+    <div id="app"></div>
+    <noscript><p style="padding:24px;font-family:system-ui">This portfolio runs on JavaScript. Please enable it to see the work.</p></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

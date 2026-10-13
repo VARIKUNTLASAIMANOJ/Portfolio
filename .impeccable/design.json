@@ -1,0 +1,488 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T14:27:22.000Z",
+  "title": "Design System: Execution Trace",
+  "extensions": {
+    "colorMeta": {
+      "cool-paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "#f5f5f8",
+        "tonalRamp": [
+          "#0b0b0d",
+          "#242426",
+          "#3f3f42",
+          "#5d5d60",
+          "#7d7d7f",
+          "#9e9ea1",
+          "#c4c4c7",
+          "#eeeef1"
+        ]
+      },
+      "sheet-white": {
+        "role": "neutral",
+        "displayName": "Sheet White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#eeeef3",
+        "tonalRamp": [
+          "#0b0b0e",
+          "#242427",
+          "#3f3f43",
+          "#5d5d61",
+          "#7d7d81",
+          "#9e9ea2",
+          "#c3c3c8",
+          "#eeeef3"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#e1e2ea",
+        "tonalRamp": [
+          "#0a0b10",
+          "#232429",
+          "#3e3f46",
+          "#5c5d64",
+          "#7c7d84",
+          "#9d9ea5",
+          "#c2c3cb",
+          "#edeef6"
+        ]
+      },
+      "edge-gray": {
+        "role": "neutral",
+        "displayName": "Edge Gray",
+        "canonical": "#a3a6b8",
+        "tonalRamp": [
+          "#090a16",
+          "#212331",
+          "#3c3f4e",
+          "#5a5c6d",
+          "#797c8d",
+          "#9a9daf",
+          "#c0c3d5",
+          "#eaedff"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#101118",
+        "tonalRamp": [
+          "#0a0b11",
+          "#22232b",
+          "#3e3f48",
+          "#5b5d66",
+          "#7b7d86",
+          "#9c9ea8",
+          "#c2c3ce",
+          "#eceef8"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#5b5e6e",
+        "tonalRamp": [
+          "#080a16",
+          "#212331",
+          "#3c3f4e",
+          "#5a5d6d",
+          "#797c8d",
+          "#9a9daf",
+          "#bfc3d5",
+          "#eaedff"
+        ]
+      },
+      "hero-lavender": {
+        "role": "secondary",
+        "displayName": "Hero Lavender",
+        "canonical": "#d9d4fb",
+        "tonalRamp": [
+          "#0c061f",
+          "#241f3c",
+          "#403b5a",
+          "#5d587a",
+          "#7d789b",
+          "#9e99be",
+          "#c4bfe5",
+          "#eee9ff"
+        ]
+      },
+      "router-violet": {
+        "role": "primary",
+        "displayName": "Router Violet",
+        "canonical": "#5b4ddb",
+        "tonalRamp": [
+          "#11004b",
+          "#20006d",
+          "#372a90",
+          "#514cb4",
+          "#6f6dd9",
+          "#8e90ff",
+          "#b2b6ff",
+          "#dbe1ff"
+        ]
+      },
+      "retriever-sky": {
+        "role": "primary",
+        "displayName": "Retriever Sky",
+        "canonical": "#2a8fd0",
+        "tonalRamp": [
+          "#00013d",
+          "#00235d",
+          "#00437e",
+          "#0063a1",
+          "#1a84c5",
+          "#47a7e9",
+          "#6fceff",
+          "#9af9ff"
+        ]
+      },
+      "validator-leaf": {
+        "role": "primary",
+        "displayName": "Validator Leaf",
+        "canonical": "#5f9a22",
+        "tonalRamp": [
+          "#001300",
+          "#003000",
+          "#164e00",
+          "#366e00",
+          "#559011",
+          "#76b340",
+          "#9bda68",
+          "#c4ff92"
+        ]
+      },
+      "human-coral": {
+        "role": "primary",
+        "displayName": "Human Coral",
+        "canonical": "#e2583a",
+        "tonalRamp": [
+          "#360000",
+          "#5b0000",
+          "#7f0000",
+          "#a42d11",
+          "#ca5137",
+          "#f17458",
+          "#ff9a7d",
+          "#ffc5a6"
+        ]
+      },
+      "warn-amber": {
+        "role": "primary",
+        "displayName": "Warn Amber",
+        "canonical": "#c77712",
+        "tonalRamp": [
+          "#2c0000",
+          "#4d0000",
+          "#6f2600",
+          "#924600",
+          "#b66700",
+          "#da892e",
+          "#ffaf5a",
+          "#ffd985"
+        ]
+      },
+      "lane-violet": {
+        "role": "secondary",
+        "displayName": "Lane Violet",
+        "canonical": "#e9e5fd",
+        "tonalRamp": [
+          "#0c0817",
+          "#252132",
+          "#403d50",
+          "#5e5a6f",
+          "#7e7a8f",
+          "#9f9bb1",
+          "#c4c1d8",
+          "#efebff"
+        ]
+      },
+      "lane-lime": {
+        "role": "secondary",
+        "displayName": "Lane Lime",
+        "canonical": "#eef8c8",
+        "tonalRamp": [
+          "#0a0d00",
+          "#222800",
+          "#3d441a",
+          "#5b6238",
+          "#7a8357",
+          "#9ba477",
+          "#c1ca9c",
+          "#ebf5c5"
+        ]
+      },
+      "lane-peach": {
+        "role": "secondary",
+        "displayName": "Lane Peach",
+        "canonical": "#fde4d9",
+        "tonalRamp": [
+          "#160702",
+          "#311f17",
+          "#4e3b32",
+          "#6d584f",
+          "#8e786e",
+          "#b0998f",
+          "#d6beb4",
+          "#ffe9de"
+        ]
+      },
+      "lane-sky": {
+        "role": "secondary",
+        "displayName": "Lane Sky",
+        "canonical": "#dcf0fb",
+        "tonalRamp": [
+          "#020d14",
+          "#17262e",
+          "#32424b",
+          "#4f616a",
+          "#6e808a",
+          "#8fa2ac",
+          "#b4c8d2",
+          "#def2fd"
+        ]
+      },
+      "night-navy": {
+        "role": "neutral",
+        "displayName": "Night Navy",
+        "canonical": "#090b1a",
+        "tonalRamp": [
+          "#080a18",
+          "#202334",
+          "#3b3e51",
+          "#585c70",
+          "#787c91",
+          "#999db3",
+          "#bec3d9",
+          "#e8edff"
+        ]
+      },
+      "night-panel": {
+        "role": "neutral",
+        "displayName": "Night Panel",
+        "canonical": "#12152b",
+        "tonalRamp": [
+          "#07081d",
+          "#1e2239",
+          "#393e57",
+          "#575c77",
+          "#767b98",
+          "#979dba",
+          "#bcc2e1",
+          "#e6edff"
+        ]
+      },
+      "night-violet": {
+        "role": "primary",
+        "displayName": "Night Violet",
+        "canonical": "#9184ff",
+        "tonalRamp": [
+          "#14004a",
+          "#26006b",
+          "#3d278e",
+          "#5949b2",
+          "#776bd7",
+          "#978dfc",
+          "#bbb3ff",
+          "#e5deff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The hero headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings, after the owning agent glyph."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project names and role titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text; optical sizing on."
+      },
+      "label": {
+        "displayName": "Machine voice",
+        "purpose": "JetBrains Mono for signatures, run status, trace logs, record labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "rest",
+        "value": "0 1px 2px rgb(16 17 24 / 0.06), 0 4px 12px -6px rgb(16 17 24 / 0.12)",
+        "purpose": "Run panel, agent nodes, nav at rest, activity card."
+      },
+      {
+        "name": "float",
+        "value": "0 2px 4px rgb(16 17 24 / 0.04), 0 24px 48px -24px rgb(16 17 24 / 0.28)",
+        "purpose": "Chat, launcher, stacked project cards, photo tags."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Arrivals: nodes, cards, the chat panel."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Packets on edges (420-480ms)."
+      },
+      {
+        "name": "ticker",
+        "value": "60s linear infinite",
+        "purpose": "Skills ticker; paused on hover, static with reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "767px",
+        "purpose": "Progress bar, vertical hero graph, chat bottom sheet."
+      },
+      {
+        "name": "menu",
+        "value": "959px",
+        "purpose": "Nav links behind a menu button."
+      },
+      {
+        "name": "stack",
+        "value": "1023px",
+        "purpose": "Single-column toolbox, cards, experience."
+      },
+      {
+        "name": "hero",
+        "value": "1099px",
+        "purpose": "Two-column hero."
+      },
+      {
+        "name": "rail",
+        "value": "1279px",
+        "purpose": "Right-edge trace rail."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one main action per area.",
+      "html": "<button class=\"ds-btn-primary\">Download résumé</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 20px; border: 1.5px solid #101118; border-radius: 999px; background: #101118; color: #fff; font: 620 15px/1 'Bricolage Grotesque', system-ui, sans-serif; cursor: pointer; transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s; } .ds-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 20px -10px rgb(16 17 24 / .7); } .ds-btn-primary:focus-visible { outline: 2px solid #5b4ddb; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary actions such as Ask my agent.",
+      "html": "<button class=\"ds-btn-ghost\">Ask my agent</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 20px; border: 1.5px solid #101118; border-radius: 999px; background: transparent; color: #101118; font: 620 15px/1 'Bricolage Grotesque', system-ui, sans-serif; cursor: pointer; transition: background-color .2s, transform .25s cubic-bezier(.16,1,.3,1); } .ds-btn-ghost:hover { background: rgb(16 17 24 / .06); transform: translateY(-1px); } .ds-btn-ghost:focus-visible { outline: 2px solid #5b4ddb; outline-offset: 3px; }"
+    },
+    {
+      "name": "Suggestion Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "A suggested question.",
+      "html": "<button class=\"ds-chip\">Which project should I look at first?</button>",
+      "css": ".ds-chip { padding: 7px 14px; border: 1.5px solid #e1e2ea; border-radius: 999px; background: #fff; color: #5b5e6e; font: 400 14px/1.3 'Bricolage Grotesque', system-ui, sans-serif; cursor: pointer; transition: color .2s, border-color .2s, background-color .2s; } .ds-chip:hover { color: #101118; border-color: #5b4ddb; background: #f3f1fe; } .ds-chip:focus-visible { outline: 2px solid #5b4ddb; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ask Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "The pill question box.",
+      "html": "<input class=\"ds-input\" placeholder=\"Ask about my work…\">",
+      "css": ".ds-input { width: 320px; height: 50px; padding: 0 20px; border: 1.5px solid #e1e2ea; border-radius: 999px; background: #eeeef3; color: #101118; caret-color: #5b4ddb; font: 400 17px 'Bricolage Grotesque', system-ui, sans-serif; transition: border-color .2s, background-color .2s; } .ds-input::placeholder { color: #5b5e6e; } .ds-input:focus-visible { outline: none; border-color: #5b4ddb; background: #fff; }"
+    },
+    {
+      "name": "Agent Node",
+      "kind": "custom",
+      "refersTo": "agent-node",
+      "description": "An agent in the graph, active state.",
+      "html": "<div class=\"ds-node\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\"><path d=\"M8 1.2 14.8 8 8 14.8 1.2 8Z\" fill=\"#5b4ddb\"/></svg><span class=\"ds-node-name\">Router</span><span class=\"ds-node-state\">routing</span></div>",
+      "css": ".ds-node { display: grid; grid-template-columns: 16px 1fr; column-gap: 10px; align-items: center; width: 136px; height: 52px; padding: 0 12px; border: 1.5px solid #5b4ddb; border-radius: 14px; background: #efedfc; color: #101118; box-shadow: 0 1px 2px rgb(16 17 24 / .06), 0 4px 12px -6px rgb(16 17 24 / .12); font-family: 'Bricolage Grotesque', system-ui, sans-serif; } .ds-node svg { grid-row: 1 / 3; transform: scale(1.2); } .ds-node-name { align-self: end; font-size: 15px; font-weight: 680; } .ds-node-state { align-self: start; font: 450 11px 'JetBrains Mono', monospace; color: #5b4ddb; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "A lane-tinted project card with signature and title.",
+      "html": "<article class=\"ds-card\"><p class=\"ds-sig\">research(question: str) → Report</p><h3 class=\"ds-title\">Project</h3><p class=\"ds-sum\">One line on what it does.</p></article>",
+      "css": ".ds-card { width: 340px; padding: 28px; border: 1.5px solid #d2cbfa; border-radius: 32px; background: #e9e5fd; color: #101118; font-family: 'Bricolage Grotesque', system-ui, sans-serif; box-shadow: 0 2px 4px rgb(16 17 24 / .04), 0 24px 48px -24px rgb(16 17 24 / .28); } .ds-sig { margin: 0 0 12px; font: 450 13px 'JetBrains Mono', monospace; color: #4a3dc4; } .ds-title { margin: 0; font-size: 40px; font-weight: 790; letter-spacing: -0.04em; line-height: 1; } .ds-sum { margin: 12px 0 0; font-size: 17px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Launch Console",
+    "overview": "The page is a product launch for one engineer, run on an agent graph. A huge two-line headline and a portrait open it, with the skills gliding underneath on an endless circuit strip where current flows pad to pad; projects open one at a time from a thumbnail rail, wired into a big preview of their architecture; certificates come forward in a wired carousel; checkpoints run along a horizontal timeline; the page closes on \"Let's talk\": underline fields beside a hairline list of direct lines. A small mascot agent answers questions from anywhere on the page.\n\nLight is the default world: cool paper, ink type, a lavender hero field with a node-editor dot grid, and four pastel lanes. Dark is a deep navy with violet light. Both share one grammar of pills, rounded cards and dashed edges with packets.",
+    "keyCharacteristics": [
+      "Heavy, tight display type (Bricolage Grotesque 780–790, −0.04em) at up to 96px.",
+      "Pastel lanes (violet, lime, peach, sky) give each project, tool group and product its own color identity.",
+      "Five agent hues carry meaning inside the graph, the trace rail and section glyphs.",
+      "Pill-shaped controls everywhere; cards at 24–32px corners; nodes at 14px.",
+      "Motion is data moving: current flowing through the skills strip and project wire, packets through architecture diagrams, the trace packet stepping node to node."
+    ],
+    "rules": [
+      {
+        "name": "The Lane Identity Rule",
+        "body": "A lane color belongs to one item for the whole page: a project's lane tints its card and its architecture packets. Lanes rotate in order (violet, lime, peach, sky); never hand-pick one for decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tinted Secondary Rule",
+        "body": "On a lane field, secondary text is mixed from the lane's ink, never plain slate gray.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Inks Rule",
+        "body": "Agent colors have a graphics value (3:1 or better) and a text ink (4.5:1 or better). Agent-colored text always uses the ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Machine Voice Rule",
+        "body": "Mono is for things a system would print: signatures, run status, trace logs, record field labels, and the contact form's field labels and contact-list labels. Buttons, tags, headings, values and human messages stay in the sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Kicker Rule",
+        "body": "Nothing sits above a heading. The availability pill lives below the hero buttons, never as an eyebrow.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do give every new section an owning agent and put its glyph before the heading.",
+      "Do keep new items in the lane rotation so color stays an identity, not a decoration.",
+      "Do animate only when something moves through the system (current, a packet, a check), and give every animation a reduced-motion state.",
+      "Do keep all biography in `src/content.js`; empty arrays hide sections."
+    ],
+    "donts": [
+      "Don't put labels or pills above headings.",
+      "Don't use gray text on lane fields; tint it from the lane ink.",
+      "Don't set tags, dates, values or headings in mono (the contact form's field labels are the one exception).",
+      "Don't add a second accent color outside the agents and lanes.",
+      "Don't link a placeholder; slots stay visibly dead until filled."
+    ]
+  }
+}
