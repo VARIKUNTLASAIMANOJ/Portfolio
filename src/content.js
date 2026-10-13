@@ -12,6 +12,8 @@ export default {
   meta: {
     title: 'Sai Manoj · AI Engineer',
     description: 'Sai Manoj Varikuntla, AI/ML engineer in Hyderabad. Semantic search, RAG and document retrieval systems.',
+    url: 'https://saimanojvarikuntla-portfolio.vercel.app', // the live address, for link previews and the sitemap
+    image: '/image.png', // the picture shown when the link is shared
   },
 
   person: {
@@ -20,11 +22,11 @@ export default {
     role: 'an AI engineer', // finishes the headline: "I'm [Name], [role]."
     // intro: 'I engineer retrieval pipelines and agentic systems that ground language models in evidence rather than conjecture.',
     // status: '[Open to AI engineering roles]', // the pill above the headline; null hides it
-    photo: '/image.png', // path in /public, e.g. '/me.jpg'; null hides it
+    photo: '/image.webp', // path in /public, e.g. '/me.jpg'; null hides it
     photoTags: ['Hyderabad', 'Open to AI engineering roles'], // little chips floating on the photo
     aboutTitle: 'Behind the run',
     about: [
-      'I’m interested in building AI agents that can do more than call tools and generate text. I enjoy figuring out how retrieval, orchestration, evaluation, and failure handling fit together to make systems genuinely useful beyond a controlled environment.',
+      'I work on the messy middle between AI research and real-world software: getting the right context, making outputs trustworthy, and turning model capabilities into systems that actually work. Most of the interesting problems live in the details.',
     ],
     facts: [
       { label: 'Based in', value: 'Hyderabad, India' },
