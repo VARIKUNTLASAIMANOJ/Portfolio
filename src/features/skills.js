@@ -11,7 +11,7 @@ import { $, $$, reducedMotion } from '../lib/dom.js';
 const PHONE = matchMedia('(max-width: 559px)').matches;
 const { R, STEP, Y_TOP, Y_BOT, HEIGHT } = PHONE
   ? { R: 24, STEP: 128, Y_TOP: 52, Y_BOT: 98, HEIGHT: 168 }
-  : { R: 28, STEP: 168, Y_TOP: 60, Y_BOT: 120, HEIGHT: 200 };
+  : { R: 25, STEP: 150, Y_TOP: 54, Y_BOT: 108, HEIGHT: 182 };
 const SPEED = PHONE ? 28 : 34; // px per second
 
 // 45° routing between two points; r trims the ends back to a node's edge
@@ -120,33 +120,32 @@ export function initSkills() {
     }
   }
 
-  // ---- the loop ----
-
-  let offset = 0;
-  let last = 0;
-  let raf = 0;
-  const holds = new Set(); // reasons the strip is standing still
-  const hold = (why, on) => (on ? holds.add(why) : holds.delete(why));
-  const apply = () => (track.style.transform = `translate3d(${-offset}px,0,0)`);
-  const tick = (now) => {
-    const dt = last ? Math.min(64, now - last) : 0;
-    last = now;
-    if (!holds.size) {
-      offset = (offset + (SPEED * dt) / 1000) % setW;
-      apply();
-    }
-    raf = requestAnimationFrame(tick);
-  };
+  // ---- the glide ----
+  // One endless animation handed to the browser's compositor, so the glide
+  // costs no script per frame. It pauses for hover, drag or when off screen;
+  // a drag scrubs it by moving its clock.
 
   if (!still) {
+    const duration = (setW / SPEED) * 1000;
+    const glide = track.animate([{ transform: 'translate3d(0,0,0)' }, { transform: `translate3d(${-setW}px,0,0)` }], {
+      duration,
+      iterations: Infinity,
+    });
+    const holds = new Set(); // reasons the strip is standing still
+    let onScreen = false;
+    const sync = () => (onScreen && !holds.size ? glide.play() : glide.pause());
+    const hold = (why, on) => {
+      if (on) holds.add(why);
+      else holds.delete(why);
+      sync();
+    };
+    glide.pause();
+
     new IntersectionObserver(([e]) => {
-      if (e.isIntersecting && !raf) {
-        last = 0;
-        raf = requestAnimationFrame(tick);
-      } else if (!e.isIntersecting && raf) {
-        cancelAnimationFrame(raf);
-        raf = 0;
-      }
+      onScreen = e.isIntersecting;
+      // the flowing current is painted, not composited: rest it off screen too
+      strip.dataset.visible = String(onScreen);
+      sync();
     }).observe(strip);
     strip.addEventListener('pointerenter', (e) => e.pointerType === 'mouse' && hold('hover', true));
     strip.addEventListener('pointerleave', (e) => e.pointerType === 'mouse' && hold('hover', false));
@@ -154,14 +153,13 @@ export function initSkills() {
     // drag to scrub, with any pointer
     let drag = null;
     view.addEventListener('pointerdown', (e) => {
-      drag = { x: e.clientX, from: offset };
+      drag = { x: e.clientX, from: Number(glide.currentTime) || 0 };
       hold('drag', true);
     });
     addEventListener('pointermove', (e) => {
       if (!drag) return;
-      const dx = e.clientX - drag.x;
-      offset = (((drag.from - dx) % setW) + setW) % setW;
-      apply();
+      const t = drag.from - ((e.clientX - drag.x) / SPEED) * 1000;
+      glide.currentTime = ((t % duration) + duration) % duration;
     });
     addEventListener('pointerup', () => {
       if (!drag) return;
