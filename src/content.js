@@ -37,7 +37,7 @@ export default {
   },
 
   links: {
-    resume: 'https://drive.google.com/file/d/1X9YE9iezKu7HsuzBS2ukmDRWAQQQcYCD/view?usp=sharing', // e.g. '/resume.pdf' after dropping the file in /public
+    resume: 'https://drive.google.com/file/d/1GR8WBraLdWnAmmkep0fyhQNBTdBEn0r6/view?usp=sharing', // e.g. '/resume.pdf' after dropping the file in /public
     email: 'varikuntlasaimanoj@gmail.com',
     linkedin: 'https://www.linkedin.com/in/sai-manoj-varikuntla-082b782b8/',
     github: 'https://github.com/VARIKUNTLASAIMANOJ',
