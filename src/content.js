@@ -179,7 +179,7 @@ export default {
       dates: 'Oct 2026 — Present',
       location: 'Hyderabad, India',
       mode: 'Onsite',
-      // summary: '[One or two sentences on the role.]',
+      summary: 'Developing an agricultural management platform using FastAPI, PostgreSQL/PostGIS, and React, with role-based access enabling field officers and managers to manage planting records and monitor field operations.\n\nBuilding QR-based tree registration and tracking workflows with GPS location data, photographic records, and inspection history, supporting offline field use and nursery-to-planting traceability.',
       // items: [
       //   {
       //     title: '[Work item]',
